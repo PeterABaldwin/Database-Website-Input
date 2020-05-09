@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <style>
+            form {
+                border: solid black 1px
+            }
+            h1 {
+                color: maroon;
+            }
+            h3{ color: navy;}
+        </style>
+		<title>Group2 - Books</title>
+	</head>
+
+	<body>
+		<h1>Add Book Information</h1>
+		<h3>Leave parts of form blank to receive all data from filled form</h3>
+        <b>Must select collection </b>
+        <p>Ex: only fill user id and search ratings. </p>
+		<form action="./searchBooks" method="GET">
+            <div>
+                <label for="collections">From Which Collection</label>
+                <select id="collections" data-style="btn-info" name="targetCollection">
+                <optngroup label="selectGroup">
+                    <option name="" value="0">Select Collection</option>
+                    <option name="booklist" value="booklist">Book List</option>
+                    <option name="books" value="books">Books</option>
+                    <option name="book_tags" value="book_tags">Book Tags</option>
+                    <option name="rating" value="rating">Ratings</option>
+                    <option name="tags" value="tags">Tags</option>
+                    <option name="to_read" value="to_read">To Read</option>
+                </optngroup>
+                </select> 
+            </div>
+			<div>
+				<label for="book_id">Book's ID:</label> <input type="number" id="book_id" name="targetBook_id">
+			</div>
+            <div>
+				<label for="user_id">User's ID:</label> <input type="number" id="user_id" name="targetUser_id">
+			</div>
+            <div>
+				<label for="tag_id">Tag's ID:</label> <input type="number" id="tag_id" name="targetTag_id">
+			</div>
+			<div>
+				<button type="submit">Find information with parameters</button> <button type="reset">Clear Form</button>
+			</div>
+		</form>
+
+        <h1>Average Rating</h1>
+		<h3>by book id</h3>
+        <form action="./calculate" method="GET">
+            <div>
+                <label for="book">Book's ID:</label> <input type="number" id="book" name="targetBook">
+			</div>
+			<div>
+				<button type="submit">Calculate</button> <button type="reset">Clear Form</button>
+			</div>
+		</form>
+
+	</body>
+</html>

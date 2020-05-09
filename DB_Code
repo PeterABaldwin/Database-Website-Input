@@ -1,0 +1,42 @@
+-- create collections
+Database();
+use Group2;
+
+db.createCollection('booklist');
+db.createCollection('books');
+db.createCollection('book_tags');
+db.createCollection('ratings');
+db.createCollection('tags');
+db.createCollection('to_read');
+
+
+--import statements
+mongoimport --db Group2 --collection booklist --type csv --file /home/student/Desktop/456_Group_2/csv/booklist.csv --headerline
+
+mongoimport --db Group2 --collection books --type csv --file /home/student/Desktop/456_Group_2/csv/books.csv --headerline
+
+mongoimport --db Group2 --collection book_tags --type csv --file /home/student/Desktop/456_Group_2/csv/book_tags.csv --headerline
+
+mongoimport --db Group2 --collection ratings --type csv --file /home/student/Desktop/456_Group_2/csv/ratings.csv --headerline
+
+mongoimport --db Group2 --collection tags --type csv --file /home/student/Desktop/456_Group_2/csv/tags.csv --headerline
+
+mongoimport --db Group2 --collection to_read --type csv --file /home/student/Desktop/456_Group_2/csv/to_read.csv --headerline
+
+
+--test find queries
+db.booklist.find()
+db.books.find().limit(10)
+db.book_tags.find().limit(10)
+db.ratings.find().limit(10)
+db.tags.find().limit(10)
+db.to_read.find().limit(10)
+
+
+//insert
+localhost:5709/addbooklist?id=60&title=Orthoclase&author=Brendin&format=paperback&price=16.99
+localhost:5709/addbook?book_id=57193&goodreads_book_id=99999&best_book_id=71893755&work_id=9907581&books_count=500&isbn=1899977&isbn13=123456789123&original_publication_year=2020&original_title=how to mongo
+localhost:5709/addbook_tag?goodreads_book_id=50&tag_id=9221&count=1234
+localhost:5709/addrating?user_id=4&book_id=6195&rating=4
+localhost:5709/addtag?tag_id=34252&tag_name=mongo files
+localhost:5709/addto_read?user_id=500&book_id=1789

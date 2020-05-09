@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <style>
+            form {
+                border: solid black 1px
+            }
+            h1 {
+                color: maroon;
+            }
+            h3{ color: navy;}
+        </style>
+		<title>Group2 - Books</title>
+	</head>
+
+	<body>
+		<h1>Add Book Information</h1>
+
+        <h3>Insert Book Listing </h3>
+
+		<form action="./addbooklist" method="GET">
+			<div>
+				<label for="id">Book ID</label> <input type="number" id="id" name="id">
+			</div>
+			<div>
+				<label for="title">Book Title</label> <input type="text" id="title" name="title">
+			</div>
+			<div>
+				<label for="author">Author</label> <input type="text" id="author" name="author">
+			</div>
+            <div>
+				<label for="format">Book Format</label> <input type="text" id="format" name="format">
+			</div>
+            <div>
+				<label for="price">Sell Price</label> <input type="number"  step="0.01" id="price" name="price">
+			</div>
+			<div>
+				<button type="submit">Add Book Listing</button> <button type="reset">Clear Form</button>
+			</div>
+		</form>
+
+        <h3>Insert Book </h3>
+
+		<form action="./addbook" method="GET">
+			<div>
+				<label for="book_id">Book ID</label> <input type="number" id="book_id" name="book_id">
+			</div>
+			<div>
+				<label for="goodreads_book_id">Goodreads Book ID</label> <input type="number" id="goodreads_book_id" name="goodreads_book_id">
+			</div>
+			<div>
+				<label for="best_book_id">Bestbook Book ID</label> <input type="number" id="best_book_id" name="best_book_id">
+			</div>
+			<div>
+				<label for="work_id">Work ID</label> <input type="number" id="work_id" name="work_id">
+			</div>
+			<div>
+				<label for="isbn">ISBN#</label> <input type="number" id="isbn" name="isbn">
+			</div>
+			<div>
+				<label for="isbn13">ISBN13#</label> <input type="number" id="isbn13" name="isbn13">
+			</div>
+			<div>
+				<label for="original_publication_year">Publication Year</label> <input type="number" id="original_publication_year" name="original_publication_year">
+			</div>
+			<div>
+				<label for="original_title">Book Title</label> <input type="text" id="original_title" name="original_title">
+			</div>
+			<div>
+				<button type="submit">Add Book</button> <button type="reset">Clear Form</button>
+			</div>
+		</form>
+
+        <h3>Insert Book Tag </h3>
+
+		<form action="./addbook_tag" method="GET">
+			<div>
+				<label for="goodreads_book_id">Book ID</label> <input type="number" id="goodreads_book_id" name="goodreads_book_id">
+			</div>
+			<div>
+				<label for="tag_id">Tag ID</label> <input type="number" id="tag_id" name="tag_id">
+			</div>
+			<div>
+				<label for="count">How many books use tag</label> <input type="number" id="count" name="count">
+			</div>
+			<div>
+				<button type="submit">Add Book Tag</button> <button type="reset">Clear Form</button>
+			</div>
+		</form>
+
+        <h3>Insert Rating </h3>
+
+		<form action="./addrating" method="GET">
+			<div>
+				<label for="user_id">User ID</label> <input type="number" id="user_id" name="user_id">
+			</div>
+			<div>
+				<label for="book_id">Book ID</label> <input type="number" id="book_id" name="book_id">
+			</div>
+			<div>
+				<label for="rating">Rating</label> <input type="number" id="rating" name="rating">
+			</div>
+			<div>
+				<button type="submit">Add Rating</button> <button type="reset">Clear Form</button>
+			</div>
+		</form>
+
+        <h3>Insert Tag Information </h3>
+
+		<form action="./addtag" method="GET">
+			<div>
+				<label for="tag_id">Tag ID</label> <input type="number" id="tag_id" name="tag_id">
+			</div>
+			<div>
+				<label for="tag_name">Tag's Name</label> <input type="text" id="tag_name" name="tag_name">
+			</div>
+			<div>
+				<button type="submit">Add Tag</button> <button type="reset">Clear Form</button>
+			</div>
+		</form>
+
+        <h3>Insert To-Read </h3>
+
+		<form action="./addto_read" method="GET">
+			<div>
+				<label for="user_id">Book ID</label> <input type="number" id="user_id" name="user_id">
+			</div>
+			<div>
+				<label for="book_id">User ID</label> <input type="number" id="book_id" name="book_id">
+			</div>
+			<div>
+				<button type="submit">Add To-Read</button> <button type="reset">Clear Form</button>
+			</div>
+		</form>
+	</body>
+</html>
